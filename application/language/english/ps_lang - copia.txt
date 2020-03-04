@@ -1,0 +1,782 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+$lang['site_name'] = "Multi-Store";
+$lang['setting_label'] = "Setting";
+$lang['shop_label'] = "Shop";
+$lang['btn_shop_tag'] = "Shop Tags";
+$lang['lbl_search_shop'] = "Search";
+$lang['status_label'] = "Transactions Status";
+$lang['trans_detail'] = "Transaction Detail";
+$lang['shops_unpublish_list_label'] = "Unpublished Shop List";
+$lang['btn_create_new_shop'] = "Create New Shop";
+$lang['btn_shop_list'] = "Unpublish Shop List";
+$lang['btn_push_notification'] = "Push Notification";
+$lang['btn_register_user'] = "Register User";
+$lang['user_label'] = "User";
+$lang['user_ban'] = "User Ban";
+$lang['user_unban'] = "User Unban";
+$lang['noti_yes_label'] = "Yes";
+$lang['noti_no_label'] = "No";
+$lang['success_noti_add'] = "Notification has been successfully added";
+$lang['success_noti_delete'] = "Notification has been successfully deleted";
+$lang['delete_noti_label'] = "Delete Notification?";
+$lang['noti_yes_message'] = "Yes- Notification will delete from system.";
+$lang['btn_system_user'] = "System User";
+$lang['btn_export_database'] = "Export Database";
+$lang['btn_about_app'] = "About App";
+$lang['address_label'] = "Address";
+$lang['lbl_about_shop'] = "About Shop";
+$lang['lbl_categories'] = "Categories";
+$lang['user_email'] = "Email";
+$lang['user_email_label'] = "User Email";
+$lang['user_password'] = "Password";
+$lang['sign_in'] = "Signin";
+$lang['total_users_count_label'] = "Totoal Users";
+$lang['total_cat_count_label'] = "Totoal Categories";
+$lang['total_wallpaper_count_label'] = "Totoal Wallpapers";
+$lang['total_contact_label'] = "Totoal Contact Messages";
+$lang['btn_search'] = "Search";
+$lang['back_shop_list'] = "Back Shop List";
+$lang['err_image_missing'] = "No cover photo is uploaded";
+$lang['err_icon_missing'] = "No icon is uploaded";
+$lang['about_info'] = "About Information";
+$lang['allowed_modules'] = "Allowed Module";
+$lang['shop_name'] = "Shop Name :";
+$lang['shop_name_label'] = "Shop Name";
+$lang['add_more_color'] = "Add More Color";
+$lang['color_code'] = "Product Color";
+$lang['btn_version'] = "Version";
+$lang['ver_info'] = "Version Information";
+$lang['ver_no_label'] = "Version No";
+$lang['ver_msg_label'] = "Version Message";
+$lang['ver_title_label'] = "Version Title";
+$lang['ver_force_update'] = "Version Force Update?";
+$lang['ver_need_data'] = "Version Need Clear Data?";
+$lang['select_multiple_images'] = "Please select multiple Product images.";
+$lang['del_icon_label'] = "Delete Icon";
+$lang['del_icon_confirm'] = "Are you sure you want to delete the icon?";
+$lang['success_version_add'] = "Version has been successfully added";
+$lang['success_version_edit'] = "Version has been successfully updated";
+$lang['err_user_pass_blank'] = "Please Provide Password";
+$lang['err_user_pass_conf_blank'] = "Please Provide Confirm Password";
+$lang['err_user_name_blank'] = "Please Provide User Name";
+$lang['err_user_email_blank'] = "Please Provide User Email";
+$lang['err_user_email_invalid'] = "invalid User Email";
+$lang['err_user_email_exist'] = "User Email is already existed";
+$lang['err_user_not_verify'] = "Sorry, your account is not yet verify."; 
+$lang['no_record'] = "No more records";
+$lang['invalid_api_key'] = "API Key is invalid";
+$lang['go_to_paypal_label'] = "Go To Paypal";
+$lang['f_shop_create_success_title'] = "Congratulation!";
+$lang['f_shop_create_success_text'] = "Your shop has been registered and our approval team will review it. You will be notified by email if your registered shop is approved.";
+$lang['go_to_shop_register'] = "Go To Shop Register";
+$lang['f_user_pass_required'] = "Please Enter User Password";
+$lang['f_user_pass_length'] = "The length of User Password must be greater than 4";
+$lang['f_user_conf_required'] = "Please Enter User Confirm Password";
+$lang['f_user_conf_length'] = "The length of User Confirm Password must be greater than 4";
+$lang['err_description_label'] = "Please provide description";
+$lang['err_shop_tag_label'] = "Please provide shop tag";
+$lang['btn_approved_shop'] = "Approval Shop";
+$lang['phone_label3'] = "Phone 3";
+$lang['select_status'] = "Select Approved or Rejected?";
+$lang['paypal_success_label'] = "Successfully Paypal!!!";
+$lang['btn_reject_shop'] = "Reject Shop Lists";
+$lang['new_shop_register'] = "New shop has been registered.";
+$lang['success_shop_register'] = "Your Shop has been registered.";
+$lang['shop_approve'] = "Your shop has been approved.";
+$lang['shop_reject'] = "Your shop has been rejected.";
+$lang['no_record_found'] = "No Record Found";
+$lang['error_login'] = "Your login credentails are wrong. Please try again.";
+
+$lang['apikey_info'] = "Api Key Information";
+$lang['key_label'] = "Key";
+$lang['success_apikey_edit'] = "Api Key is successfully updated";
+$lang['success_apikey_add'] = "Api Key is successfully added";
+$lang['btn_api_keys'] = "Api Keys";
+$lang['profile_img'] = "Profile Image";
+
+/** Categories */
+$lang['cat_add'] = "Add Categories";
+$lang['wrn_no_data'] = "There is no data yet";
+$lang['cat_name'] = "Category Name";
+$lang['cat_img'] = "Category Photo";
+$lang['cat_info'] = "Category Information";
+$lang['cat_ordering'] = "Ordering";
+$lang['cat_edit'] = "Edit Category";
+$lang['success_cat_add'] = "Category has been successfully added";
+$lang['success_cat_edit'] = "Category has been successfully updated";
+$lang['success_upload'] = "Image has been successfully updated";
+$lang['delete_cat_label'] = "Delete Category?";
+$lang['cat_yes_all_message'] = "When delete this category, it will delete all related sub categories and products also. So, do you still want to delete it?";
+$lang['success_cat_delete'] = "Category has been successfully deleted";
+$lang['cat_search'] = "Search Category";
+$lang['cat_icon'] = "Category Icon";
+$lang['btn_replace_icon'] = "Replace Icon";
+$lang['upload_icon'] = "Upload Icon";
+$lang['about_upload_icon'] = "Upload Icon";
+$lang['fav_upload_icon'] = "Fav Icon";
+$lang['sidebar_upload_icon'] = "Sidebar Logo";
+$lang['btn_upload'] = "Upload";
+$lang['err_cat_name'] = "Please provide category name";
+$lang['err_cat_len'] = "The length of Category Name must be greater than 4";
+$lang['err_cat_exist'] = "Category Name is already existed in the system";
+
+/** Sub Categories */
+$lang['subcat_info'] = "Sub Category Information";
+$lang['subcat_name'] = "Sub Category Name";
+$lang['subcat_ordering'] = "Sub Category Order";
+$lang['subcat_img'] = "Sub Category Photo";
+$lang['subcat_icon'] = "Sub Category Icon";
+$lang['subcat_search'] = "Search Sub Category";
+$lang['subcat_add'] = "Add Sub Category";
+$lang['subcat_edit'] = "Edit Sub Category";
+$lang['success_subcat_edit'] = "Sub Category has been successfully updated";
+$lang['success_subcat_add'] = "Sub Category has been successfully added";
+$lang['success_subcat_delete'] = "Sub Category has been successfully deleted";
+$lang['err_subcat_name'] = "Please provide sub category name";
+$lang['err_subcat_len'] = "The length of Sub Category Name must be greater than 4";
+$lang['err_subcat_exist'] = "Sub Category Name is already existed in the system";
+$lang['delete_subcat_label'] = "Delete Sub Category?";
+$lang['subcat_delete_confirm_message'] = "Are you sure to delete this Sub Categry?";
+$lang['subcat_yes_all_message'] = "When delete this sub category, it will delete all related products also. So, do you still want to delete it?";
+$lang['subcat_no_only_message'] = "<b>Only Sub Category</b> - Only Sub Category will delete from system.";
+$lang['subcat_yes_all_label'] = "Yes All";
+$lang['subcat_no_only_label'] = "Only Sub Category";
+$lang['select_subcat'] = "Select Sub Category";
+$lang['select_cat'] = "Select Category";
+$lang['subcat_panel_title'] = "Sub Category List";
+$lang['Prd_search_cat'] = "Select Category Name";
+$lang['btn_reset'] = "Reset";
+$lang['btn_yes'] = "Yes";
+$lang['upload_photo'] = "Upload photo";
+$lang['upload_button'] = "Upload";
+$lang['replace_photo_button'] = "Replace Cover Photo";
+$lang['photo_desc_label'] = "Photo Description";
+$lang['del_cover_photo'] = "Delete Cover Photo";
+$lang['del_cover_photo_confirm'] = "Are you sure you want to delete the photo?";
+
+
+/** Discounts */
+$lang['status'] = "Status(Is Publish?)";
+$lang['dis_name'] = "Discount Name";
+$lang['dis_add'] = "Add Discounts";
+$lang['dis_percent'] = "Discount Percent(%)";
+$lang['choose_prd_label'] = "Choose Products";
+$lang['dis_info'] = "Discount Informations";
+$lang['dis_photo'] = "Discount Photo";
+$lang['prd_name'] = "Product Name";
+$lang['prd_code'] = "Code";
+$lang['product_price'] = "Price";
+$lang['Dis_add'] = "Add Discounts";
+$lang['success_dis_add'] = "Discounts has been successfully added";
+$lang['success_dis_edit'] = "Discounts has been successfully updated";
+$lang['delete_dis_label'] = "Delete Discounts?";
+$lang['dis_delete_confirm_message'] = "Are you sure to delete this Discounts?";
+$lang['dis_edit'] = "Edit Discounts";
+$lang['err_dis_name'] = "Please provide Discount name";
+$lang['err_dis_percent'] = "Please provide Discount Percent";
+$lang['err_dis_len'] = "The length of Discount Name must be greater than 4";
+$lang['err_dis_exist'] = "Discount Name is already existed in the system";
+$lang['success_dis_delete'] = "Discounts has been successfully deleted";
+$lang['discount_photo'] = "Discount Photo";
+$lang['discount_search'] = "Search Discount";
+
+/** Feeds */
+$lang['feed_add'] = "Add New Feeds";
+$lang['feed_info'] = "New Feeds Informations";
+$lang['feed_name'] = "Feed Name";
+$lang['feed_desc'] = "Feed Description";
+$lang['feed_edit'] = "Edit Blogs";
+$lang['success_feed_add'] = "New Feeds has been successfully added";
+$lang['success_feed_edit'] = "New Feeds has been successfully updated";
+$lang['err_dup_name'] = "Name is already existed in the system";
+$lang['err_feed_exist'] = "Feed Name is already existed in the system";
+$lang['delete_feed_label'] = "Delete New Feeds?";
+$lang['feed_delete_confirm_message'] = "Are you sure to delete this New Feeds?";
+$lang['success_feed_delete'] = "New Feeds has been successfully deleted";
+$lang['f_item_cat_required'] = "Please Select Category Name";
+$lang['err_feed_len'] = "The length of Feed Name must be greater than 4";
+$lang['err_feed_name'] = "Please provide Feed name";
+$lang['feed_search'] = "Feed Search";
+$lang['feed_gallery'] = "Blog Gallery";
+
+/** Products and Attribute*/
+$lang['list_product_nav'] = "Product";
+$lang['prd_add'] = "Add Product";
+$lang['att_add'] = "Add New Attribute";
+$lang['add_att_detail'] = "Add New Attribute Detail";
+$lang['list_attribute_header'] = "Attribute Header List";
+$lang['wrn_no_data'] = "There is no data yet";
+$lang['product_name'] = "Product Name";
+$lang['att_name'] = "Attribute Name";
+$lang['Prd_search_subcat'] = "Select Sub Category Name";
+$lang['Prd_search'] = "Search Product";
+$lang['Prd_search_dis'] = "Select Discount Type";
+$lang['product_gallery'] = "Product Gallery";
+$lang['prd_info'] = "Product Information";
+$lang['rec_prd_info'] = "Recently Added Products";
+$lang['att_info'] = "Attribute Information";
+$lang['prd_desc'] = "Product Description";
+$lang['prd_high_info'] = "Product Highlight Information";
+$lang['prd_edit'] = "Edit Product";
+$lang['prd_code'] = "Product Code";
+$lang['success_prd_add'] = "Product has been successfully added";
+$lang['success_prd_edit'] = "Product has been successfully updated";
+$lang['success_upload'] = "Image has been successfully updated";
+$lang['delete_prd_label'] = "Delete Product?";
+$lang['prd_yes_all_message'] = "Are you sure want to delete Product?";
+$lang['success_prd_delete'] = "Product has been successfully deleted";
+$lang['prd_search'] = "Search Product";
+$lang['btn_save_prd_att'] = "Save & Go To Product Attribute";
+$lang['btn_att_list'] = "Attribute List";
+$lang['btn_save_gallery'] = "Save & Go To Gallery";
+$lang['unit_price'] = "Price";
+$lang['search_tag'] = "Search Tag/Keyword";
+$lang['f_item_subcat_required'] = "Please Select Sub Category Name";
+$lang['f_item_discount_required'] = "Please Select Category Name";
+$lang['err_Prd_name'] = "Please provide product name";
+$lang['err_Prd_len'] = "The length of Product Name must be greater than 4";
+$lang['err_Prd_exist'] = "Product Name is already existed in the system";
+$lang['is_discount'] = "Is Discount?";
+$lang['is_featured'] = "Is Featured?";
+$lang['is_available'] = "Is Available?";
+$lang['order_by'] = "Order By";
+$lang['select_order'] = "Select Order";
+$lang['from_price'] = "From Price";
+$lang['to_price'] = "To Price";
+$lang['product_title'] = "Title";
+$lang['product_desc'] = "Description";
+$lang['add_more_spec'] = "Add More Specification";
+$lang['prd_specification'] = "Product Specification";
+$lang['original_price'] = "Original Price";
+$lang['shipping_cost'] = "Shipping Cost";
+$lang['minimum_order'] = "Minimum Order";
+$lang['prd_unit'] = "Product Unit";
+$lang['prd_measurement'] = "Product Measurement";
+$lang['err_price'] = "Please Provide Attribute Price";
+
+/** Common */
+$lang['err_access'] = "Sorry, you have no access to take this action";
+$lang['err_model'] = "Database error occured";
+$lang['err_sys'] = "System error occured";
+$lang['btn_edit'] = "Edit";
+$lang['btn_update'] = "Update";
+$lang['btn_delete'] = "Delete";
+$lang['btn_publish'] = "Publish";
+$lang['no'] = "No";
+$lang['btn_save'] = "Save";
+$lang['btn_cancel'] = "Cancel";
+$lang['btn_replace_photo'] = "Replace Photo";
+$lang['Remove'] = "Remove";
+$lang['success_img_delete'] = "Image has been successfully deleted";
+$lang['trans_date_label'] = "Date";
+$lang['push_message'] = "Push Message";
+$lang['noti_des_label'] = "Description";
+$lang['noti_img'] = "Notification Photo";
+$lang['success_touch_count'] = "Touch Count has been successfully deleted";
+
+/** Attibute Header and Detail */
+$lang['count_detail'] = "Counts of Detail";
+$lang['add_att_detail'] = "Add Attribute Detail";
+$lang['detail_label'] = "Detail";
+$lang['att_edit'] = "Edit Attribute";
+$lang['success_att_add'] = "Attribute has been successfully added";
+$lang['success_att_edit'] = "Attribute has been successfully updated";
+$lang['delete_att_label'] = "Delete Attribute?";
+$lang['att_yes_all_message'] = "When delete this product, it will delete all related sub categories and category also. So, do you still want to delete it?";
+$lang['success_att_delete'] = "Attribute has been successfully deleted";
+$lang['att_delete_confirm_message'] = "Do you want to delete all the items under that product together?";
+$lang['att_search'] = "Search Attribute";
+$lang['att_detail_search'] = "Search Attribute Detail";
+$lang['att_price'] = "Attribute Price";
+$lang['list_attribute_detail'] = "Attribute Detail List";
+$lang['selected_product_name'] = "Selected Product Name";
+$lang['selected_attribute_header'] = "Selected Attribute Header Name";
+$lang['att_detail_name'] = "Attribute Detail Name";
+$lang['attribute_detail_extra_price'] = "(If your attribute chagre additional price, please provide additional price only. It will add to the product's pirce as automatically.It not override the item price. Just add as additional price.  Eg; price_total = product_price + attribute_additional_pirce)";
+$lang['success_attdetail_edit'] = "Attribute Detail has been successfully updated";
+$lang['success_attdetail_add'] = "Attribute Detail has been successfully added";
+$lang['attdetail_edit'] = "Update Attribute Detail Information";
+$lang['success_attdetail_delete'] = "Attribute Detail has been successfully deleted";
+$lang['att_no_only_message'] = "Only Attribute - Only Attribute Detail will delete from system.";
+$lang['delete_attdetail_label'] = "Delete Attribute Detail?";
+$lang['err_att_name'] = "Please provide Attribute name";
+$lang['err_att_len'] = "The length of Attribute Name must be greater than 4";
+$lang['err_att_exist'] = "Attribute Name is already existed in the system";
+$lang['att_detail_info'] = "Attribute Detail Information";
+$lang['product_name_count'] = "Product Name Count";
+$lang['err_detail_name'] = "Please provide Attribute Detail name";
+$lang['err_detail_len'] = "The length of Attribute Detail Name must be greater than 4";
+$lang['err_detail_exist'] = "Attribute Detail Name is already existed in the system";
+
+
+/*Collection*/
+$lang['collect_search'] = "Search";
+$lang['collect_photo'] = "Collection Photo";
+$lang['collect_name'] = "Collection Name";
+$lang['collect_status'] = "Collection Status";
+$lang['collect_info'] = "Collection Information";
+$lang['collect_ordering'] = "Collection Order";
+$lang['collect_img'] = "Collection Photo";
+$lang['collect_search'] = "Search Collection";
+$lang['collect_add'] = "Add Collection";
+$lang['collect_edit'] = "Edit Collection";
+$lang['success_collect_edit'] = "Collection has been successfully updated";
+$lang['success_collect_add'] = "Collection has been successfully added";
+$lang['success_collect_delete'] = "Collection has been successfully deleted";
+$lang['err_collect_name'] = "Please provide Collection name";
+$lang['err_collect_len'] = "The length of Collection Name must be greater than 4";
+$lang['err_collect_exist'] = "Collection Name is already existed in the system";
+$lang['delete_collect_label'] = "Delete Collection?";
+$lang['collect_delete_confirm_message'] = "Are you sure want to delete this Collection?";
+$lang['collect_yes_all_message'] = "Yes All - Collection and Items will delete from system.";
+$lang['collect_no_only_message'] = "Only Collection - Only Collection will delete from system.";
+$lang['collect_yes_all_label'] = "Yes All";
+$lang['collect_no_only_label'] = "Only Collection";
+$lang['please_select_product'] = "Please Select Product";
+
+$lang['api_info'] = " Api Setting";
+$lang['api_order_by'] = "Order By";
+$lang['api_count'] = "Api Count";
+$lang['success_api_edit'] = "Api Setting has been successfully updated";
+
+/** Comments */
+$lang['comm_user'] = "Users";
+$lang['comm_desc'] = "Comment Description";
+$lang['comm_date'] = "Date";
+$lang['write_reply'] = "Write a comment reply";
+$lang['btn_reply'] = "Reply";
+$lang['reply_cmt'] = "Comment Reply";
+$lang['comm_search'] = "Search";
+$lang['comment_header'] = "Comments";
+$lang['date'] = "Date";
+$lang['reply'] = "Reply";
+
+/** Likes */
+
+$lang['like_product_name'] = "Product Name";
+$lang['like_user_name'] = "User Name";
+
+
+/** Favourites */
+$lang['fav_product_name'] = "Product Name";
+$lang['fav_user_name'] = "User Name";
+
+
+/** Transactions */
+$lang['trans_total_amount'] = "Total Amount";
+$lang['trans_discount_amount'] = "Discount Amount";
+$lang['trans_balance_amount'] = "Balance Amount";
+$lang['trans_billing_address'] = "Billing Address";
+$lang['trans_delivery_address'] = "Delivery Address";
+$lang['btn_update'] = "Update";
+$lang['trans_search'] = "Search Transactions";
+$lang['btn_update'] = "Update";
+$lang['Prd_qty'] = "Qty";
+$lang['Prd_dis'] = "Discount(%)";
+$lang['Prd_dis_coupon'] = "Counpon Discount";
+$lang['Prd_amt'] = "Amount";
+$lang['Prd_dis_price'] = "Discount Price";
+$lang['trans_status'] = "Transactions Status:";
+$lang['trans_code_label'] = "Transactions Code";
+$lang['success_trans_edit'] = "Transactions Status has been successfully updated";
+$lang['Prd_name'] = "Product Name";
+$lang['Prd_price'] = "Product Price";
+
+
+/** Popular Categories */
+$lang['popular_cat_name'] = "Popular Category Name";
+$lang['popular_cat_img'] = "Popular Category Photo";
+$lang['view'] = "View";
+$lang['popular_cat_search'] = "Search Popular Category";
+$lang['popular_cat_view'] = "Most Popular Category";
+$lang['popular_cat_info'] = "Popular Category Information";
+$lang['popular_cat_icon'] = "Popular Category Icon";
+
+
+/** Popular Products */
+$lang['popular_prd_name'] = "Popular Product Name";
+$lang['popular_prd_code'] = "Popular Product Code";
+$lang['popular_prd_price'] = "Popular Product Price";
+$lang['popular_prd_search'] = "Search Popular Product";
+$lang['popular_prd_view'] = "Most Popular Product";
+$lang['popular_prd_info'] = "Popular Product Information";
+$lang['popular_subcat_name'] = "Popular Sub Category Name";
+$lang['popular_prd_desc'] = "Popular Product Description";
+$lang['popular_prd_keyword'] = "Popular Product Keywords";
+$lang['popular_prd_highlight'] = "Popular Product Highlight";
+
+
+/** Purchased Categories */
+$lang['purchased_cat_name'] = "Purchased Category Name";
+$lang['purchased_cat_img'] = "Purchased Category Photo";
+$lang['purchased_cat_view'] = "Most Purchased Category";
+$lang['purchased_cat_info'] = "Purchased Category Information";
+$lang['purchased_cat_icon'] = "Purchased Category Icon";
+$lang['purchased_cat_search'] = "Search Purchased Category";
+
+
+/** Purchased Products */
+$lang['purchased_prd_name'] = "Purchased Product Name";
+$lang['purchased_prd_code'] = "Purchased Product Code";
+$lang['purchased_prd_price'] = "Purchased Product Price";
+$lang['purchased_prd_view'] = "Most Purchased Product";
+$lang['purchased_prd_search'] = "Search Purchased Product";
+$lang['purchased_subcat_name'] = "Purchased Sub Category Name";
+$lang['purchased_prd_desc'] = "Purchased Product Description";
+$lang['purchased_prd_keyword'] = "Purchased Product Keywords";
+$lang['purchased_prd_info'] = "Purchased Product Information";
+$lang['purchased_prd_highlight'] = "Purchased Product Highlight";
+$lang['total_revenue'] = "Monthly Transactions";
+$lang['performance_label'] = "Statistics";
+$lang['comment_label'] = "Comment";
+$lang['prd_label'] = "Products Count";
+$lang['cat_label'] = "Categories Count";
+$lang['subcat_label'] = "Subcategory Count";
+$lang['dis_label'] = "Discount";
+$lang['collect_label'] = "Collection";
+$lang['view_all_label'] = "View All";
+$lang['transaction_table'] = "Transaction Table";
+
+/* Shop Information  */
+$lang['name_label'] = "Name";
+$lang['description_label'] = "Description";
+$lang['phone_label'] = "Phone 1(Default)";
+$lang['contact_email_label'] = "Contact Email";
+$lang['shop_cover_photo_label'] = "Shop Cover Photo Upload";
+$lang['shop_icon_photo_label'] = "Shop Icon Photo Upload";
+$lang['shop_image_recommended_size'] = "(Recommended Size:600 × 400)";
+$lang['shop_image_recommended_size_icon'] = "(Recommended Size:256 × 256)";
+$lang['find_location_label'] = "Type & Find location from Google API";
+$lang['shop_lat_label'] = "Latitude";
+$lang['shop_lng_label'] = "Longitude";
+$lang['success_shop_add'] = "Shop has been successfully added";
+$lang['success_shop_edit'] = "Shop has been successfully updated";
+$lang['delete_shop_label'] = "Delete Shop?";
+$lang['shop_info'] = "Shop Information";
+$lang['phone_label2'] = "Phone 2";
+$lang['phone_label3'] = "Phone 3";
+$lang['address_label1'] = "Address 1";
+$lang['address_label2'] = "Address 2";
+$lang['address_label3'] = "Address 3";
+$lang['delete_shop_confirm_message'] = "Are you sure you want to delete the shop because it will delete from?";
+$lang['err_shop_name'] = "Please provide shop name";
+$lang['about_mess_label'] = "Messenger";
+$lang['err_shop_len'] = "The length of Shop Name must be greater than 4";
+$lang['err_shop_exist'] = "Shop Name is already existed in the system";
+$lang['about_chart_section'] = "Chart Information";
+$lang['about_nav_icon'] = "Navigation Icon";
+$lang['about_fav_icon'] = "Fav Icon";
+$lang['about_backend_icon'] = "For Backend";
+
+/* Payment Setting  */
+$lang['stripe_label'] = "[Option 1] : Payment With Stripe";
+$lang['stripe_publishable_key'] = "Publishable Key";
+$lang['stripe_secret_key'] = "Secret Key";
+$lang['stripe_enable_label'] = "Is Enabled Stripe Payment?";
+$lang['paypal_label'] = "[Option 2] : Payment With Paypal Enabled";
+$lang['paypal_env_label'] = "Paypal Environment";
+$lang['paypal_merchant_label'] = "Paypal Merchant ID";
+$lang['paypal_pub_label'] = "Paypal Public Key";
+$lang['paypal_pri_label'] = "Paypal Private Key";
+$lang['paypal_enabled_label'] = "Is Paypal Enabled?";
+$lang['bank_label'] = "[Option 3] : Payment With Bank Enabled";
+$lang['bank_account_label'] = "Bank Account";
+$lang['bank_name_label'] = "Bank Name";
+$lang['bank_code_label'] = "Bank Code";
+$lang['branch_code_label'] = "Branch Code";
+$lang['swift_code_label'] = "Swift Code";
+$lang['banktransfer_label'] = "Is Bank Transfer Enabled?";
+$lang['cod_label'] = "[Option 4] : Payment With Cash On Delivery ";
+$lang['cod_email_label'] = "COD Confrimation Email";
+$lang['cod_enable_label'] = "Is Enabled Cash On Delivery?";
+
+/* Currency setting  */
+$lang['currency_symbol_label'] = "Currency Symbol (eg; $)";
+$lang['currency_form_label'] = "Currency Short Form (eg; USD)";
+
+/* Sending Email Setting(For SMTP)  */
+$lang['sender_email_label'] = "Sender Email Account(For SMTP)";
+
+/** System Users */
+$lang['btn_add_new'] = "Add New Users";
+$lang['user_name'] = "User Name";
+$lang['user_edit'] = "Edit User";
+$lang['user_info'] = "User Information";
+$lang['user_add'] = "Add Users";
+$lang['role_label'] = "User Role";
+$lang['conf_password'] = "Confirm Password";
+$lang['select_shop_label'] = "If user is 'Shop Admin', please select 'Shop' to assign ";
+$lang['delete_user_label'] = "Delete User?";
+$lang['user_yes_all_message'] = "Are you sure want to delete User?";
+
+
+/** Contact */
+$lang['contact_name'] = "Contact Name";
+$lang['contact_email'] = "Contact Email";
+$lang['contact_info'] = "Contact Information";
+$lang['btn_contact'] = "Contact Us Message";
+$lang['delete_contact_label'] = "Delete Contact?";
+$lang['contact_delete_confirm_message'] = "Are you sure to delete this Contact?";
+$lang['success_contact_delete'] = "Contact has been successfully deleted";
+$lang['success_contact'] = "Contact has been successfully added";
+$lang['contact_info_label'] = "Contact Detail Information";
+$lang['contact_phone'] = "Contact Person Phone";
+$lang['about_contact_label'] = "About Contact Message";
+$lang['lbl_view'] = "View";
+$lang['back_button']                    = "Back";
+$lang['contact_receive_message']  = "You have received new contact us message.";
+
+/** Ratings */
+$lang['rating_product_name'] = "Product Name";
+$lang['rating_user_name'] = "User Name";
+$lang['rating_value'] = "Rating Value";
+$lang['rating_title'] = "Title";
+
+
+/** Orders */
+$lang['pending_count'] = "Pending Order";
+$lang['delivery_count'] = "Delivery Order";
+$lang['completed_count'] = "Completed Order";
+$lang['order_count'] = "Total Order";
+
+
+
+$lang['shipping_method_label'] = "Select Default Shipping Method";
+$lang['shipping_method'] = "Default Shipping Method";
+$lang['shop_tags'] = "Shop Tags";
+$lang['overall_tax_label'] = "Overall Tax (%)";
+$lang['shipping_tax_label'] = "Shipping Tax (%)";
+$lang['whapsapp_no_label'] = "Whatsapp Number";
+$lang['refund_policy_label'] = "Refund Policy";
+$lang['privacy_policy_label'] = "Privacy Policy";
+$lang['privacypolicy'] = "Terms & Conditions";
+
+/** About */  
+$lang['app_info_lable'] = "About Information";
+$lang['about_title_label'] = "About Title";
+$lang['description_label'] = "About Description";
+$lang['about_email_label'] = "About Email";
+$lang['about_phone_label'] = "About Phone";
+$lang['about_website_label'] = "About Website Link";
+$lang['about_seo_section'] = "SEO Information";
+$lang['about_seo_title_label'] = "SEO Title";
+$lang['about_seo_desc_label'] = "SEO Description";
+$lang['about_seo_keywords_label'] = "SEO Keywords";
+$lang['about_social_section'] = "Social Information";
+$lang['about_facebook_label'] = "Facebook";
+$lang['about_gplus_label'] = "Google+";
+$lang['about_instagram_label'] = "Instagram";
+$lang['about_youtube_label'] = "Youtube";
+$lang['about_pinterest_label'] = "Pinterest";
+$lang['about_twitter_label'] = "Twitter";
+$lang['about_color_section'] = "About Website Theme Color";
+$lang['about_theme'] = "Available Themes";
+$lang['success_about_edit'] = "About is successfully updated";
+$lang['about_ads_analyt'] = "Google Analytic & Ads Setting";
+$lang['about_ads_client'] = "Ads Client";
+$lang['about_ads_slot'] = "Ads Slot";
+$lang['about_analyt_track_id'] = "Analytic Track Id";
+$lang['about_ads_on'] = "Enable Google Adsense";
+$lang['about_analyt_on'] = "Enable Google Analytic";
+$lang['about_img'] = "About Cover Photo";
+
+/** Push Notification */
+$lang['total_label'] = "Total : "; 
+$lang['device_label'] = " Device "; 
+$lang['devices_label'] = " Devices "; 
+$lang['registered_label'] = " has been registered for Push Notification";
+
+$lang['noti_info'] = "Push Notification";
+$lang['noti_message_label'] = "Message";
+$lang['noti_message_tooltips'] = "Please provide the messsage for push notification.";
+$lang['noti_send_btn'] = "Send Push Notification";
+$lang['sorry_no_device'] = "Sorry, there is no registered device for Push Notification.";
+$lang['select_cat'] = "Select Category";
+$lang['err_noti_name'] = "Please provide Message";
+$lang['err_noti_len'] = "The length of Message must be greater than 4";
+$lang['err_noti_exist'] = "Message is already existed in the system";
+
+
+/** Coupons */
+$lang['coupon_code_message'] = "Coupon Code must be at least 4. Eg; ACE1 ";
+$lang['coupon_amount_message'] = "Coupon Dsicount Amount must be like 10, 20, 30.. It is not percentage.";
+$lang['coupon_add'] = "Add Coupon";
+$lang['coupon_info'] = "Coupon Information";
+$lang['coupon_name'] = "Coupon Name";
+$lang['coupon_code'] = "Coupon Code";
+$lang['coupon_amount'] = "Coupon Amount";
+$lang['coupon_edit'] = "Edit Coupon";
+$lang['coupon_search'] = "Search Coupon";
+$lang['success_coupon_add'] = "Coupon has been successfully added";
+$lang['success_coupon_edit'] = "Coupon has been successfully updated";
+$lang['success_coupon_delete'] = "Coupon has been successfully deleted";
+$lang['delete_coupon_label'] = "Delete Coupon?";
+$lang['coupon_delete_confirm_message'] = "Are you sure to delete this Coupon?";
+$lang['err_coupon_name'] = "Please provide Coupon name";
+$lang['err_coupon_len'] = "The length of Coupon Name must be greater than 4";
+$lang['err_coupon_exist'] = "Coupon Name is already existed in the system";
+
+
+/** Shipping Method */
+$lang['shipping_name'] = "Shipping Name";
+$lang['shipping_price'] = "Price";
+$lang['shipping_days'] = "Days";
+$lang['shipping_add'] = "Add Shipping Method";
+$lang['shipping_edit'] = "Edit Shipping Method";
+$lang['shipping_search'] = "Search Shipping Method";
+$lang['shipping_info'] = "Shipping Method Information";
+$lang['success_shipping_add'] = "Shipping Method has been successfully added";
+$lang['success_shipping_edit'] = "Shipping Method has been successfully updated";
+$lang['success_shipping_delete'] = "Shipping Method has been successfully deleted";
+$lang['err_shipping_name'] = "Please provide shipping method name";
+$lang['err_shipping_len'] = "The length of Shipping Method Name must be greater than 4";
+$lang['err_shipping_exist'] = "Shipping Method Name is already existed in the system";
+$lang['delete_shipping_label'] = "Delete Shipping Method?";
+$lang['shipping_delete_confirm_message'] = "Are you sure to delete this Shipping Method?";
+
+
+/** Tags */
+$lang['tag_name'] = "Tag Name";
+$lang['tag_img'] = "Tag Photo";
+$lang['tag_add'] = "Add Tag";
+$lang['tag_search'] = "Search Tag";
+$lang['tag_info'] = "Tag Information";
+$lang['tag_icon'] = "Tag Icon";
+$lang['err_tag_name'] = "Please provide tag name";
+$lang['err_tag_len'] = "The length of Tag Name must be greater than 4";
+$lang['err_tag_exist'] = "Tag Name is already existed in the system";
+$lang['success_tag_add'] = "Tag has been successfully added";
+$lang['success_tag_edit'] = "Tag has been successfully updated";
+$lang['success_tag_delete'] = "Tag has been successfully deleted";
+$lang['delete_tag_label'] = "Delete Tag?";
+$lang['tag_delete_confirm_message'] = "Are you sure to delete this Tag?";
+
+$lang['paypal_transaction_failed'] = "Sorry, Paypal transaction failed.";
+$lang['stripe_transaction_failed'] = "Sorry, Stripe transaction failed.";
+$lang['payment_not_select'] = "Sorry, Payment is not selected.";
+
+$lang['success_profile_update'] = "Your profile successfully updated.";
+$lang['success_user_edit']      = "System User has been successfully updated";
+
+$lang['version_no_required'] = "Version No is required";
+$lang['version_title_required'] = "Version Title is required";
+$lang['version_message_required'] = "Version Message is required";
+
+$lang['success_version_edit'] = "Successfully saved version information";
+
+//For transaction 
+$lang['trans_payment_method'] = "Payment Method : ";
+$lang['trans_memo'] = "Memo : ";
+$lang['trans_item_sub_total'] = "Item Sub Total : ";
+$lang['trans_coupon_discount_amount'] = "Coupon Discount Amount (-) : ";
+$lang['trans_overall_tax'] = "Overall Tax ";
+$lang['trans_shipping_cost'] = "Shipping Cost (Using ";
+$lang['trans_shipping_tax'] = "Shipping Tax ";
+$lang['trans_total_balance_amount'] = "Total Balance Amount : ";
+$lang['order_desc'] = "Order from Multi-Store : ";
+$lang['err_email_not_send_to_shop'] = "Sorry, email not able to send the shop owner.";
+$lang['err_email_not_send_to_user'] = "Sorry, email not able to send the customer.";
+$lang['order_receive_subject'] = "New order has been received";
+$lang['order_status_subject'] = "Order order status has been changed to ";
+
+$lang['user_id_required'] = "Sorry, user id is required";
+$lang['user_name_required'] = "Sorry, user name is required";
+$lang['user_email_required'] = "Sorry, user email is required";
+
+/** Payment Information */
+$lang['btn_paypal_config'] = "Paypal Configuration";
+$lang['paypal_info'] = "Paypal Configuration";
+$lang['price'] = "Price";
+$lang['currency_code'] = "Currency Code";
+$lang['api_username'] = "API Username";
+$lang['api_password'] = "API Password";
+$lang['api_signature'] = "API Signature";
+$lang['application_id'] = "Application ID";
+$lang['developer_email_account'] = "Developer Email Account";
+$lang['api_version'] = "API Version";
+$lang['sandbox'] = "Sandbox";
+
+/** Registered Users */
+$lang['success_user_delete'] = "User has been successfully deleted";
+$lang['err_user_banned'] = "Sorry, you cannot login because your account is banned.";
+
+/** For Countries */
+$lang['country_name'] = "Country Name";
+$lang['country_add'] = "Add Country";
+$lang['country_search'] = "Search Country";
+$lang['country_edit'] = "Edit Country";
+$lang['country_info'] = "Country Information";
+$lang['success_country_add'] = "Country has been successfully added";
+$lang['success_country_edit'] = "Country has been successfully updated";
+$lang['success_country_delete'] = "Country has been successfully deleted";
+$lang['delete_country_label'] = "Delete Country?";
+$lang['country_yes_all_message'] = "When delete this country, it will delete all related cities and zones also. So, do you still want to delete it?";
+$lang['err_country_name'] = "Please provide country name";
+$lang['err_country_len'] = "The length of Country Name must be greater than 4";
+$lang['err_country_exist'] = "Country Name is already existed in the system";
+
+
+/** For Cities */
+$lang['city_name'] = "City Name";
+$lang['city_add'] = "Add City";
+$lang['select_country'] = "Select Country Name";
+$lang['city_search'] = "Search City";
+$lang['city_edit'] = "Edit City";
+$lang['city_info'] = "City Information";
+$lang['success_city_add'] = "City has been successfully added";
+$lang['success_city_edit'] = "City has been successfully updated";
+$lang['success_city_delete'] = "City has been successfully deleted";
+$lang['delete_city_label'] = "Delete City?";
+$lang['city_delete_confirm_message'] = "Are you sure to delete this City?";
+$lang['err_city_name'] = "Please provide city name";
+$lang['err_city_len'] = "The length of City Name must be greater than 4";
+$lang['err_city_exist'] = "City Name is already existed in the system";
+$lang['f_item_country_required'] = "Please Select Country Name";
+
+
+/** For Zones */
+$lang['zone_name'] = "Zone Name";
+$lang['zone_search'] = "Search Zone";
+$lang['zone_add'] = "Add Zone";
+$lang['zone_edit'] = "Edit Zone";
+$lang['zone_info'] = "Zone Information";
+$lang['select_city'] = "Select City Name (Multiple Select)";
+$lang['success_zone_add'] = "Zone has been successfully added";
+$lang['success_zone_edit'] = "Zone has been successfully updated";
+$lang['success_zone_delete'] = "Zone has been successfully deleted";
+$lang['delete_zone_label'] = "Delete Zone?";
+$lang['zone_delete_confirm_message'] = "Are you sure to delete this Zone?";
+$lang['err_zone_name'] = "Please provide zone name";
+$lang['err_zone_len'] = "The length of Zone Name must be greater than 4";
+$lang['err_zone_exist'] = "Zone Name is already existed in the system";
+$lang['f_item_city_required'] = "Please Select City Name";
+
+
+/** For Shipping Zones */
+$lang['select_zone'] = "Select Zones";
+$lang['shipping_zone_add'] = "Add Shipping With Zone";
+$lang['shipping_zone_edit'] = "Edit Shipping With Zone";
+$lang['shipping_zone_search'] = "Search Shipping With Zone";
+$lang['shipping_zone_info'] = "Shipping With Zone Information";
+$lang['success_shipping_zone_add'] = "Shipping With Zone has been successfully added";
+$lang['success_shipping_zone_edit'] = "Shipping With Zone has been successfully updated";
+$lang['success_shipping_zone_delete'] = "Shipping With Zone has been successfully deleted";
+$lang['delete_shipping_zone_label'] = "Delete Shipping With Zone?";
+$lang['shipping_zone_delete_confirm_message'] = "Are you sure to delete this Shipping With Zone?";
+$lang['f_item_zone_required'] = "Please Select Zone Name";
+$lang['shipping_package_name'] = "Shipping Package Name";
+$lang['need_to_enable_zone_shipping'] = "Please enable zone shipping at Shipping Setting.";
+$lang['dup_zone_name'] = "Zone Name is already existed";
+$lang['you_selected'] = "You have selected";
+$lang['per_order_based'] = "Per Order Based";
+$lang['cost'] = "Cost";
+$lang['per_item_based'] = "Per Item Based";
+$lang['delivery_increment_of_zone'] = "Delivery Increment of Zone";
+$lang['based_cost'] = "Based Cost";
+$lang['take_prd_shipping_cost'] = "Take From Product Shipping Cost";
+$lang['free_shipping'] = "Free Shipping";
+$lang['zone_from_other_package'] = "Zone is already selected from other package.";
+$lang['increment_formula'] = "Fourmula : (Product Shipping Cost) x (Increacement value) x (QTY)";
+$lang['increment_note'] = "Note : Need to set default is 1.";
