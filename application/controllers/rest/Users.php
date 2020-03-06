@@ -64,7 +64,7 @@ class Users extends API_Controller
         );
 
         $conds['user_email'] = $user_data['user_email'];
-        $conds['status'] = 2;
+        $conds['status'] = 2;                                                                                            
        	$user_infos = $this->User->user_exists($conds)->result();
 
        	if (empty($user_infos)) {

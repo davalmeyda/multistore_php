@@ -580,7 +580,28 @@ Best Regards,<br/>
 </p>
 EOL;
     
-    
+	require("PHPMailer/class.smtp.php");
+	require("PHPMailer/class.phpmailer.php");
+
+	$mail = new PHPMailer();
+	$mail->IsSMTP();
+	$mail->Host = "smtp.gmail.com";
+	$mail->Port = 465;
+	$mail->SMTPAuth = true;
+	$mail->SMTPSecure = "ssl";
+	$mail->SMTPDebug = 1;
+	$mail->From = $to;
+	$mail->FromName = "BruFat";
+	$mail->isHTML(true);
+	$mail->Subject  = "Confirma tu registro";		
+		
+	$mail->Body = $msg;
+	$mail->AddAddress($to, $user_name);
+	$mail->SMTPAuth = true;
+	$mail->Username = "esteticarubi20@gmail.com";
+	$mail->Password = "Estetica@123";
+	$mail->Send();
+
     
 
 	// send email from admin
