@@ -9,6 +9,7 @@ $name = $_POST['nomProducto'];
 $description = "asdf";
 $unit_price = $_POST['nomPrecio'];
 $original_price = $_POST['nomPrecio'];
+$qr = $_POST['qr'];
 $is_discount = 0;
 $is_available = 1;
 $code = "";
@@ -89,6 +90,7 @@ function codProd($conexion)
 
 function agregar(
     $conexion,
+    $qr,
     $id,
     $shop_id,
     $cat_id,
@@ -135,8 +137,16 @@ function agregar(
 
     // PRODUCTOS
 
-    $agregarProducto = $conexion->prepare("INSERT INTO `mk_products`(`id`,`shop_id`,`cat_id`,`sub_cat_id`,`name`,`description`,`unit_price`,`original_price`,`is_discount`,`is_available`,`code`,`status`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-    $agregarProducto->bind_param('ssssssddiisi', $id, $shop_id, $cat_id, $sub_cad_id, $name, $description, $unit_price, $original_price, $is_discount, $is_available, $code, $status);
+    
+    if($qr==""){
+        $agregarProducto = $conexion->prepare("INSERT INTO `mk_products`(`id`,`shop_id`,`cat_id`,`sub_cat_id`,`name`,`description`,`unit_price`,`original_price`,`is_discount`,`is_available`,`code`,`status`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+        $agregarProducto->bind_param('ssssssddiisi', $id, $shop_id, $cat_id, $sub_cad_id, $name, $description, $unit_price, $original_price, $is_discount, $is_available, $code, $status);
+    } else {        
+        $agregarProducto = $conexion->prepare("INSERT INTO `mk_products`(`id`,`codbar`,`shop_id`,`cat_id`,`sub_cat_id`,`name`,`description`,`unit_price`,`original_price`,`is_discount`,`is_available`,`code`,`status`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $agregarProducto->bind_param('sssssssddiisi', $id, $qr, $shop_id, $cat_id, $sub_cad_id, $name, $description, $unit_price, $original_price, $is_discount, $is_available, $code, $status);
+    }
+
+
     $agregarProducto->execute();
 
     // IMAGENES
@@ -163,5 +173,5 @@ function agregar(
 $codImg = codImg($conexion);
 $codProd = codProd($conexion);
 
-agregar($conexion, $codProd, $shop_id, $cat_id, $sub_cad_id, $name, $description, $unit_price, $original_price, $is_discount,  $is_available, $code, $status, $codImg, $codProd, $imagen);
+agregar($conexion, $qr, $codProd, $shop_id, $cat_id, $sub_cad_id, $name, $description, $unit_price, $original_price, $is_discount,  $is_available, $code, $status, $codImg, $codProd, $imagen);
 
